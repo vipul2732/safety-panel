@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -N siwss_dual
+#PBS -q gpu
+#PBS -l select=1:ncpus=8:mem=32gb:ngpus=1
+#PBS -l walltime=08:00:00
+#PBS -j oe
+#PBS -o /home/vipul.k/targetscape/siwss_target_like/logs/train.out
+
+cd /home/vipul.k/targetscape/siwss_target_like
+mkdir -p logs data/models
+/cm/shared/apps/anaconda3/bin/python3 -u src/train_panel.py --epochs 30 --batch-size 64

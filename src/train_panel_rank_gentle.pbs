@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -N siwss_rank2
+#PBS -q gpu
+#PBS -l select=1:ncpus=8:mem=32gb:ngpus=1
+#PBS -l walltime=12:00:00
+#PBS -j oe
+#PBS -o /home/vipul.k/targetscape/siwss_target_like/logs/panel_rank_gentle.out
+
+cd /home/vipul.k/targetscape/siwss_target_like
+mkdir -p logs data/models/panel_rank_gentle
+/cm/shared/apps/anaconda3/bin/python3 -u src/train_panel_rank.py \
+  --out data/models/panel_rank_gentle \
+  --epochs 12 --batch-size 64 --lr 3e-5 --patience 4 \
+  --rank-weight 0.02 --weak-weight 0.02

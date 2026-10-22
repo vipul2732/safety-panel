@@ -1,0 +1,17 @@
+parameter,value
+score,max ECFP4 Tanimoto to training potent ligands
+clean_sensitivity_target,0.95
+t_low,0.420664
+t_low_rule,5th percentile of validation scores among molecules potent on at least one panel target
+likely_precision_target,0.95
+t_high,0.547170
+t_high_validation_precision,0.9500
+t_high_validation_count,11205
+t_high_rule,widest validation threshold whose precision is at least the recorded target
+ood_quantile,0.99
+unfamiliar_distance,0.693542
+unfamiliar_rule,"one minus the nearest training-fingerprint Tanimoto, above the 99th percentile of the validation set"
+valid_pair_auroc,0.8848
+valid_panel_auroc,0.8694
+test_pair_auroc,0.8845
+test_panel_auroc,0.8761

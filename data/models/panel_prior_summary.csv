@@ -1,0 +1,3 @@
+split,n,n_positive,n_negative,n_likely,n_uncertain,n_very_unlikely,n_unfamiliar,false_clean_rate,clean_specificity,likely_precision
+valid,14204,12148,2056,5980,7093,1118,13,0.0496,0.2510,0.9500
+test,14111,12000,2111,5864,7128,1105,14,0.0465,0.2591,0.9480

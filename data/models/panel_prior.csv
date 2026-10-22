@@ -1,0 +1,13 @@
+parameter,value
+checkpoint_epoch,15
+global_training_potent_rate,0.8940
+t_low,3.611207
+t_high,7.006950
+likely_precision_target,0.95
+t_high_validation_precision,0.9500
+t_high_validation_count,5980
+unfamiliar_distance,0.096202
+valid_panel_auroc_raw,0.7635
+valid_panel_auroc_prior,0.7539
+test_panel_auroc_raw,0.7679
+test_panel_auroc_prior,0.7577

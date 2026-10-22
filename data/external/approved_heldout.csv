@@ -1,0 +1,5 @@
+subset,n_molecules,n_panel_positive,pair_auroc,panel_auroc,top5_hit_rate,method
+approved_test,121,68,0.8056,0.7524,0.6471,fingerprint
+approved_test,121,68,0.6397,0.5991,0.3971,pocket_finetune
+approved_test_far,64,25,0.6992,0.6185,0.4800,fingerprint
+approved_test_far,64,25,0.5366,0.5908,0.2000,pocket_finetune

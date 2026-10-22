@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+
+# Ligand graphs exceed GitHub's 100 MB file limit. The command-line tool does not need this file.
+data/features/ligands.npz

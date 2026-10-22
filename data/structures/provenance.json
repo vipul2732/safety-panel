@@ -1,0 +1,8 @@
+{
+  "cutoff_angstrom": 8.0,
+  "distance": "Minimum heavy-atom distance from the representative ligand to the residue.",
+  "ligand_copy": "The copy contacting the most protein residues within the cutoff. Ties go to the closer copy.",
+  "protein": "Polymer residues other than nucleic acids and water. Modified amino acids stay in.",
+  "altloc": "Blank altloc, otherwise the highest occupancy.",
+  "source": "RCSB mmCIF for the representative PDB id in data/modeling/targets.csv."
+}

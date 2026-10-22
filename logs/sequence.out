@@ -1,0 +1,47 @@
+device cuda train 118185 valid 14204 test 14111 chains 74 length 3056
+epoch 1 loss 0.4284 valid_pair 0.8131 valid_panel 0.6265
+test pair 0.8250 test panel 0.6446
+epoch 2 loss 0.1946 valid_pair 0.8383 valid_panel 0.6915
+test pair 0.8557 test panel 0.7085
+epoch 3 loss 0.1846 valid_pair 0.8539 valid_panel 0.6596
+test pair 0.8651 test panel 0.6682
+epoch 4 loss 0.1760 valid_pair 0.8649 valid_panel 0.6675
+test pair 0.8772 test panel 0.6784
+epoch 5 loss 0.1676 valid_pair 0.8730 valid_panel 0.6581
+test pair 0.8856 test panel 0.6576
+epoch 6 loss 0.1604 valid_pair 0.8838 valid_panel 0.6671
+test pair 0.8932 test panel 0.6785
+epoch 7 loss 0.1530 valid_pair 0.8898 valid_panel 0.6748
+test pair 0.9011 test panel 0.6793
+epoch 8 loss 0.1457 valid_pair 0.8991 valid_panel 0.7004
+test pair 0.9058 test panel 0.7082
+epoch 9 loss 0.1393 valid_pair 0.9016 valid_panel 0.6953
+test pair 0.9110 test panel 0.7063
+epoch 10 loss 0.1337 valid_pair 0.9047 valid_panel 0.6984
+test pair 0.9099 test panel 0.7039
+epoch 11 loss 0.1283 valid_pair 0.9013 valid_panel 0.7212
+epoch 12 loss 0.1233 valid_pair 0.9075 valid_panel 0.7140
+test pair 0.9172 test panel 0.7223
+epoch 13 loss 0.1183 valid_pair 0.9110 valid_panel 0.7279
+test pair 0.9164 test panel 0.7367
+epoch 14 loss 0.1137 valid_pair 0.9087 valid_panel 0.6977
+epoch 15 loss 0.1096 valid_pair 0.9063 valid_panel 0.7149
+epoch 16 loss 0.1059 valid_pair 0.9110 valid_panel 0.7202
+epoch 17 loss 0.1018 valid_pair 0.9102 valid_panel 0.7192
+epoch 18 loss 0.0985 valid_pair 0.9139 valid_panel 0.7201
+test pair 0.9193 test panel 0.7352
+epoch 19 loss 0.0949 valid_pair 0.9115 valid_panel 0.7039
+epoch 20 loss 0.0920 valid_pair 0.9129 valid_panel 0.7256
+epoch 21 loss 0.0887 valid_pair 0.9126 valid_panel 0.7138
+epoch 22 loss 0.0868 valid_pair 0.9158 valid_panel 0.7240
+test pair 0.9220 test panel 0.7397
+epoch 23 loss 0.0839 valid_pair 0.9173 valid_panel 0.7190
+test pair 0.9230 test panel 0.7318
+epoch 24 loss 0.0812 valid_pair 0.9150 valid_panel 0.7242
+epoch 25 loss 0.0788 valid_pair 0.9119 valid_panel 0.7062
+epoch 26 loss 0.0772 valid_pair 0.9137 valid_panel 0.7023
+epoch 27 loss 0.0752 valid_pair 0.9164 valid_panel 0.7232
+epoch 28 loss 0.0730 valid_pair 0.9171 valid_panel 0.7199
+epoch 29 loss 0.0708 valid_pair 0.9169 valid_panel 0.6973
+early stop
+best valid pair AUROC 0.9173

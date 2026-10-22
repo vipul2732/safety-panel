@@ -1,0 +1,17 @@
+parameter,value
+clean_sensitivity_target,0.95
+t_low,1.485107
+t_low_rule,5th percentile of validation scores among molecules potent on at least one panel target
+likely_precision_target,0.95
+t_high,5.140822
+t_high_validation_precision,0.9501
+t_high_validation_count,5849
+t_high_rule,widest validation threshold whose precision is at least the recorded target
+ood_quantile,0.99
+unfamiliar_distance,0.072277
+unfamiliar_rule,nearest-training-ligand distance above the 99th percentile of the validation set
+checkpoint_epoch,14
+valid_pair_auroc,0.9118
+valid_panel_auroc,0.7506
+test_pair_auroc,0.9174
+test_panel_auroc,0.7569

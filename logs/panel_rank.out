@@ -1,0 +1,7 @@
+device cuda init epoch 15 pair 0.9132 panel 0.7635 floor 0.8932
+epoch 1 loss 0.1827 rank 0.0943 weak 0.3043 valid_pair 0.8771 valid_panel 0.8501 top5 0.4495
+epoch 2 loss 0.1571 rank 0.0322 weak 0.2209 valid_pair 0.8781 valid_panel 0.8510 top5 0.4420
+epoch 3 loss 0.1459 rank 0.0310 weak 0.1915 valid_pair 0.8813 valid_panel 0.8622 top5 0.4460
+epoch 4 loss 0.1380 rank 0.0273 weak 0.1712 valid_pair 0.8782 valid_panel 0.8578 top5 0.4491
+early stop
+no epoch stayed within 0.02 of pass 15

@@ -1,0 +1,2 @@
+weight,adopted,valid_pair_auroc,valid_panel_auroc,valid_top5,test_pair_auroc,test_panel_auroc,test_top5,fingerprint_test_pair,fingerprint_test_panel,fingerprint_test_top5
+0.30,0,0.9121,0.9007,0.9586,0.9133,0.9063,0.9590,0.8845,0.8761,0.9597

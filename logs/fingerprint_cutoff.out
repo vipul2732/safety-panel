@@ -1,0 +1,12 @@
+fingerprints
+missing 0 train 118185 queries 28315
+nearest 14160/28315
+nearest 23600/28315
+nearest 28315/28315
+nearest 9440/28315
+nearest 4720/28315
+nearest 18880/28315
+valid likely 11205 uncertain 1393 very_unlikely 1463 unfamiliar 143 false_clean 0.0444
+test likely 11095 uncertain 1410 very_unlikely 1467 unfamiliar 139 false_clean 0.0434
+t_low 0.4207 t_high 0.5472 unfamiliar 0.6935 test panel 0.8761
+wrote /home/vipul.k/targetscape/siwss_target_like/data/models/fingerprint_cutoff

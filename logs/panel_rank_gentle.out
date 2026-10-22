@@ -1,0 +1,14 @@
+device cuda init epoch 15 pair 0.9132 panel 0.7635 floor 0.8932
+epoch 1 loss 0.1389 rank 0.6282 weak 0.9173 valid_pair 0.9068 valid_panel 0.8211 top5 0.4829
+epoch 2 loss 0.1260 rank 0.4147 weak 0.6758 valid_pair 0.9063 valid_panel 0.8267 top5 0.5045
+epoch 3 loss 0.1207 rank 0.3660 weak 0.6053 valid_pair 0.9044 valid_panel 0.8325 top5 0.5161
+epoch 4 loss 0.1171 rank 0.3390 weak 0.5523 valid_pair 0.9054 valid_panel 0.8363 top5 0.5337
+epoch 5 loss 0.1141 rank 0.3228 weak 0.5173 valid_pair 0.9046 valid_panel 0.8376 top5 0.5429
+epoch 6 loss 0.1116 rank 0.3044 weak 0.4876 valid_pair 0.9028 valid_panel 0.8394 top5 0.5489
+epoch 7 loss 0.1093 rank 0.2894 weak 0.4639 valid_pair 0.9014 valid_panel 0.8398 top5 0.5538
+epoch 8 loss 0.1071 rank 0.2794 weak 0.4411 valid_pair 0.8998 valid_panel 0.8435 top5 0.5628
+epoch 9 loss 0.1051 rank 0.2649 weak 0.4154 valid_pair 0.8999 valid_panel 0.8459 top5 0.5705
+epoch 10 loss 0.1031 rank 0.2542 weak 0.3940 valid_pair 0.8982 valid_panel 0.8432 top5 0.5696
+epoch 11 loss 0.1011 rank 0.2449 weak 0.3739 valid_pair 0.8978 valid_panel 0.8451 top5 0.5768
+epoch 12 loss 0.0993 rank 0.2362 weak 0.3505 valid_pair 0.8971 valid_panel 0.8477 top5 0.5827
+saved epoch 12 valid_pair 0.8971 valid_panel 0.8477 test_pair 0.9062 test_panel 0.8489 test_top5 0.5818

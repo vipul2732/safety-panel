@@ -1,0 +1,72 @@
+panel_id,gene_symbols,target_name,target_class,in_bowes44,in_vendor77,uniprot_accessions,chembl_target_id,representative_pdb,representative_resolution,representative_ligand
+ACHE,ACHE,Acetylcholinesterase,enzyme,1,1,P22303,CHEMBL220,4M0E,2.0,1YL
+ADORA2A,ADORA2A,Adenosine A2A receptor,gpcr,1,1,P29274,CHEMBL251,5NM4,1.7,ZMA
+ADRA1A,ADRA1A,Alpha-1A adrenergic receptor,gpcr,1,1,P35348,CHEMBL229,8THK,2.6,CGZ
+ADRA2A,ADRA2A,Alpha-2A adrenergic receptor,gpcr,1,1,P08913,CHEMBL1867,6KUX,2.7,E3F
+ADRB1,ADRB1,Beta-1 adrenergic receptor,gpcr,1,1,P08588,CHEMBL213,7BVQ,2.5,1WV
+ADRB2,ADRB2,Beta-2 adrenergic receptor,gpcr,1,1,P07550,CHEMBL210,2RH1,2.4,CAU
+AR,AR,Androgen receptor,nuclear_receptor,1,1,P10275,CHEMBL1871,8E1A,1.2,3E0
+ATM,ATM,Serine-protein kinase ATM,kinase,0,1,Q13315,CHEMBL3797,8OXQ,2.5,ANP
+AURKA,AURKA,Aurora kinase A,kinase,0,1,O14965,CHEMBL4722,6VPM,1.58,R74
+AURKB,AURKB,Aurora kinase B,kinase,0,1,Q96GD4,CHEMBL2185,4AF3,2.75,VX6
+AVPR1A,AVPR1A,Vasopressin V1A receptor,gpcr,1,1,P37288,CHEMBL1889,9UWL,2.6,A1EQN
+BRD4,BRD4,Bromodomain-containing protein 4,bromodomain,0,1,O60885,CHEMBL1163125,4QB3,0.94,30M
+CACNA1C,CACNA1C,Voltage-gated calcium channel Cav1.2 alpha-1C,ion_channel,1,1,Q13936,CHEMBL1940,5V2Q,1.7,8VY
+CCKAR,CCKAR,Cholecystokinin receptor type 1,gpcr,1,1,P32238,CHEMBL1901,7F8Y,2.5,1OZ
+CHRM1,CHRM1,Muscarinic acetylcholine receptor M1,gpcr,1,1,P11229,CHEMBL216,6ZFZ,2.17,QJT
+CHRM2,CHRM2,Muscarinic acetylcholine receptor M2,gpcr,1,1,P08172,CHEMBL211,5ZKC,2.3,3C0
+CHRM3,CHRM3,Muscarinic acetylcholine receptor M3,gpcr,1,1,P20309,CHEMBL245,8EA0,2.56,IXO
+CHRNA4_CHRNB2,CHRNA4;CHRNB2,Nicotinic acetylcholine receptor alpha4/beta2,ion_channel,1,0,P43681;P17787,CHEMBL1882,6CNJ,3.7,NCT
+CNR1,CNR1,Cannabinoid receptor 1,gpcr,1,1,P21554,CHEMBL218,23IV,2.42,A1E5S
+CNR2,CNR2,Cannabinoid receptor 2,gpcr,1,1,P34972,CHEMBL253,12IZ,2.72,A1DB5
+CTSD,CTSD,Cathepsin D,protease,0,1,P07339,CHEMBL2581,6QCB,1.55,HWE
+DRD1,DRD1,Dopamine D1 receptor,gpcr,1,1,P21728,CHEMBL2056,9WG6,2.44,A1EWF
+DRD2,DRD2,Dopamine D2 receptor,gpcr,1,1,P14416,CHEMBL217,9BS9,2.28,7LD
+DRD3,DRD3,Dopamine D3 receptor,gpcr,0,1,P35462,CHEMBL234,7CMV,2.7,G6O
+EDNRA,EDNRA,Endothelin receptor type A,gpcr,1,1,P25101,CHEMBL252,8XVK,3.21,A1D5J
+EGFR,EGFR,Epidermal growth factor receptor,kinase,0,1,P00533,CHEMBL203,8A27,1.07,KY9
+ESR1,ESR1,Estrogen receptor alpha,nuclear_receptor,0,1,P03372,CHEMBL206,7BAA,1.1,T5Z
+FGFR1,FGFR1,Fibroblast growth factor receptor 1,kinase,0,1,P11362,CHEMBL3650,5EW8,1.63,5SF
+FLT1,FLT1,Vascular endothelial growth factor receptor 1,kinase,0,1,P17948,CHEMBL1868,5EX3,2.408,SAH
+GABRA1,GABRA1;GABRB2;GABRG2,"GABA-A receptor, central benzodiazepine site",ion_channel,1,1,P14867;P47870;P18507,CHEMBL1962,6X3T,2.55,PFL
+GPBAR1,GPBAR1,G-protein coupled bile acid receptor 1,gpcr,0,1,Q8TDU6,CHEMBL5409,9GYO,2.5,FWX
+GRIN1,GRIN1,"NMDA receptor GluN1, glycine site",ion_channel,1,1,Q05586,CHEMBL2015,9GJ1,1.62,A1IME
+GSK3B,GSK3B,Glycogen synthase kinase-3 beta,kinase,0,1,P49841,CHEMBL262,9X2V,1.39,PG6
+HRH1,HRH1,Histamine H1 receptor,gpcr,1,1,P35367,CHEMBL231,8X5Y,3.0,XB7
+HRH2,HRH2,Histamine H2 receptor,gpcr,1,1,P25021,CHEMBL1941,7UL3,3.0,FO9
+HTR1A,HTR1A,5-hydroxytryptamine receptor 1A,gpcr,1,1,P08908,CHEMBL214,9HYI,2.3,A1IYG
+HTR1B,HTR1B,5-hydroxytryptamine receptor 1B,gpcr,1,1,P28222,CHEMBL1898,4IAR,2.7,ERM
+HTR2A,HTR2A,5-hydroxytryptamine receptor 2A,gpcr,1,1,P28223,CHEMBL224,7WC8,2.45,92S
+HTR2B,HTR2B,5-hydroxytryptamine receptor 2B,gpcr,1,1,P41595,CHEMBL1833,4IB4,2.7,ERM
+HTR3A,HTR3A,5-hydroxytryptamine receptor 3A,ion_channel,1,1,P46098,CHEMBL1899,8BLB,3.3,VTX
+HTR6,HTR6,5-hydroxytryptamine receptor 6,gpcr,0,1,P50406,CHEMBL3371,7YS6,3.0,SRO
+INSR,INSR,Insulin receptor,kinase,0,1,P06213,CHEMBL1981,5HHW,1.79,60O
+KCNH2,KCNH2,Voltage-gated potassium channel hERG,ion_channel,1,1,Q12809,CHEMBL240,8ZYQ,3.18,1II
+KDR,KDR,Vascular endothelial growth factor receptor 2,kinase,0,1,P35968,CHEMBL279,2XIR,1.5,00J
+KIT,KIT,Mast/stem cell growth factor receptor Kit,kinase,0,1,P10721,CHEMBL1936,8PQD,1.5,9VV
+LCK,LCK,Tyrosine-protein kinase Lck,kinase,1,1,P06239,CHEMBL258,1QPC,1.6,ANP
+MALT1,MALT1,Mucosa-associated lymphoid tissue lymphoma translocation protein 1,protease,0,1,Q9UDY8,CHEMBL3632452,38GO,2.07,A1DY2
+MAOA,MAOA,Monoamine oxidase A,enzyme,1,1,P21397,CHEMBL1951,2Z5Y,2.17,DCX
+MAOB,MAOB,Monoamine oxidase B,enzyme,0,1,P27338,CHEMBL2039,9FJT,1.4,A1IDI
+MAP2K7,MAP2K7,Dual specificity mitogen-activated protein kinase kinase 7,kinase,0,1,O14733,CHEMBL3530,6YZ4,1.7,1E8
+NR3C1,NR3C1,Glucocorticoid receptor,nuclear_receptor,1,1,P04150,CHEMBL2034,4UDD,1.8,CV7
+NTRK1,NTRK1,High affinity nerve growth factor receptor TrkA,kinase,0,1,P04629,CHEMBL2815,5JFW,1.52,6K2
+OPRD1,OPRD1,Delta-type opioid receptor,gpcr,1,1,P41143,CHEMBL236,4N6H,1.8,EJ4
+OPRK1,OPRK1,Kappa-type opioid receptor,gpcr,1,1,P41145,CHEMBL237,7UL2,2.4,Q6Q
+OPRM1,OPRM1,Mu-type opioid receptor,gpcr,1,1,P35372,CHEMBL233,8Y72,2.65,VV9
+PDE3A,PDE3A,"cGMP-inhibited 3',5'-cyclic phosphodiesterase A",enzyme,1,1,Q14432,CHEMBL241,7KWE,2.0,X5M
+PDE4D,PDE4D,"cAMP-specific 3',5'-cyclic phosphodiesterase 4D",enzyme,1,1,Q08499,CHEMBL288,1Y2K,1.36,7DE
+PDK1,PDK1,Pyruvate dehydrogenase kinase isoform 1,kinase,0,1,Q15118,CHEMBL4766,9M3O,1.762,A1EMR
+PGR,PGR,Progesterone receptor,nuclear_receptor,0,1,P06401,CHEMBL208,1SQN,1.451,NDR
+PIK3CG,PIK3CG,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma",kinase,0,1,P48736,CHEMBL3267,6AUD,2.015,BWY
+PTGS2,PTGS2,Cyclooxygenase-2,enzyme,1,1,P35354,CHEMBL230,5F19,2.04,COH
+PTK2,PTK2,Focal adhesion kinase 1,kinase,0,1,Q05397,CHEMBL2695,6YOJ,1.361,P4N
+RARA,RARA,Retinoic acid receptor alpha,nuclear_receptor,0,1,P10276,CHEMBL2055,9GFE,1.583,EQN
+ROCK1,ROCK1,Rho-associated protein kinase 1,kinase,0,1,Q13464,CHEMBL3231,3V8S,2.286,0HD
+ROCK2,ROCK2,Rho-associated protein kinase 2,kinase,0,1,O75116,CHEMBL2973,8X92,2.2,YEW
+SCN5A,SCN5A,Voltage-gated sodium channel Nav1.5,ion_channel,1,1,Q14524,CHEMBL1980,9V3S,3.0,A1EQU
+SLC6A1,SLC6A1,Sodium- and chloride-dependent GABA transporter 1,transporter,0,1,P30531,CHEMBL1903,7Y7Z,3.2,TGI
+SLC6A2,SLC6A2,Sodium-dependent noradrenaline transporter,transporter,1,1,P23975,CHEMBL222,8ZP2,2.4,A1LX4
+SLC6A3,SLC6A3,Sodium-dependent dopamine transporter,transporter,1,1,Q01959,CHEMBL238,9EO4,2.66,COC
+SLC6A4,SLC6A4,Sodium-dependent serotonin transporter,transporter,1,1,P31645,CHEMBL228,9HCO,2.78,YG7
+SRC,SRC,Proto-oncogene tyrosine-protein kinase Src,kinase,0,1,P12931,CHEMBL267,1O43,1.5,821

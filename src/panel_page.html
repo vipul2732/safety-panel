@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safety panel</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --paper: #f6f4f0;
+      --card: #fffcf8;
+      --green: #1f6b45;
+      --amber: #8a5a12;
+      --stone: #44403c;
+      --navy: #1e3a5f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 16px/1.45 "Segoe UI", "Helvetica Neue", sans-serif;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 32px 20px 64px; }
+    h1 { font-size: 28px; font-weight: 650; margin: 0 0 6px; letter-spacing: -0.02em; }
+    .lede { margin: 0 0 22px; color: var(--muted); max-width: 62ch; }
+    form, .result {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    label { display: block; font-size: 13px; font-weight: 650; margin-bottom: 8px; }
+    textarea {
+      width: 100%;
+      min-height: 74px;
+      resize: vertical;
+      border: 1px solid #d6d3d1;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font: 14px/1.4 ui-monospace, "Cascadia Code", Consolas, monospace;
+      color: var(--ink);
+      background: #fff;
+    }
+    .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button.primary { background: var(--ink); color: white; }
+    button.ghost { background: transparent; color: var(--ink); border: 1px solid #d6d3d1; }
+    button:disabled { opacity: 0.55; cursor: wait; }
+    .result { margin-top: 16px; display: none; }
+    .result.show { display: block; }
+    .summary {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .sketch {
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px;
+    }
+    .sketch svg { width: 100%; height: auto; display: block; }
+    .call {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-end;
+    }
+    .classes { margin-top: 16px; }
+    .classes h2 {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 650;
+      color: var(--muted);
+    }
+    .class-row {
+      display: grid;
+      grid-template-columns: 132px 1fr 48px;
+      gap: 8px;
+      align-items: center;
+      margin-top: 6px;
+      font-size: 13px;
+    }
+    .class-bar {
+      height: 10px;
+      background: #eceae6;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .class-bar span { display: block; height: 100%; border-radius: 99px; }
+    .class-pct { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+    @media (max-width: 720px) {
+      .summary { grid-template-columns: 1fr; }
+    }
+    .call b { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+    .call.likely b { color: var(--green); }
+    .call.uncertain b { color: var(--amber); }
+    .call.very_unlikely b { color: var(--stone); }
+    .call.unfamiliar b { color: var(--navy); }
+    .meta { color: var(--muted); font-size: 14px; text-align: right; }
+    .note { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); font-size: 14px; }
+    th { color: var(--muted); font-size: 12px; font-weight: 650; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .bar {
+      height: 8px;
+      background: #eceae6;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .bar span { display: block; height: 100%; background: #44403c; }
+    .error { color: #9f1239; margin: 10px 0 0; display: none; }
+    .scroll { max-height: 520px; overflow: auto; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Safety panel</h1>
+    <p class="lede">One molecule in. Ranked similarity to known actives on 71 human safety targets, and one call.</p>
+    <form id="form">
+      <label for="smiles">SMILES</label>
+      <textarea id="smiles" name="smiles" spellcheck="false" placeholder="CC(=O)Oc1ccccc1C(=O)O">CC(=O)Oc1ccccc1C(=O)O</textarea>
+      <div class="row">
+        <button class="primary" type="submit" id="go">Rank targets</button>
+        <button class="ghost" type="button" data-smiles="CC(=O)Oc1ccccc1C(=O)O">Aspirin</button>
+        <button class="ghost" type="button" data-smiles="N#CC(=C(/N)Sc1ccccc1N)/C(C#N)=C(/N)Sc1ccccc1N">Low similarity</button>
+        <button class="ghost" type="button" data-smiles="c1cnc2cc3c(cc2n1)[C@@H]1CNC[C@H]3C1">Far from training</button>
+      </div>
+      <p class="error" id="error"></p>
+    </form>
+    <section class="result" id="result">
+      <div class="summary">
+        <div class="sketch" id="sketch" aria-label="2D structure"></div>
+        <div>
+          <div class="call" id="call">
+            <div>
+              <div id="call-name"></div>
+              <p class="note" id="call-note"></p>
+            </div>
+            <div class="meta" id="meta"></div>
+          </div>
+          <div class="classes">
+            <h2>Target class in the top 10</h2>
+            <div id="classes"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Target</th>
+              <th>Gene</th>
+              <th class="num">Similarity</th>
+              <th>Match</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script>
+    const notes = {
+      likely: "Close to a known active on this panel.",
+      uncertain: "Between the two cutoffs.",
+      very_unlikely: "Below the low cutoff.",
+      unfamiliar: "Far from the training molecules, and below the low cutoff."
+    };
+    const labels = {
+      likely: "Likely",
+      uncertain: "Uncertain",
+      very_unlikely: "Very unlikely",
+      unfamiliar: "Unfamiliar"
+    };
+    const classLabels = {
+      gpcr: "GPCR",
+      kinase: "Kinase",
+      enzyme: "Enzyme",
+      ion_channel: "Ion channel",
+      nuclear_receptor: "Nuclear receptor",
+      transporter: "Transporter",
+      protease: "Protease",
+      bromodomain: "Bromodomain"
+    };
+    const classColors = {
+      gpcr: "#1e3a5f",
+      kinase: "#1f6b45",
+      enzyme: "#8a5a12",
+      ion_channel: "#7c3f3f",
+      nuclear_receptor: "#3f3f46",
+      transporter: "#3f6212",
+      protease: "#9a3412",
+      bromodomain: "#44403c"
+    };
+    const form = document.getElementById("form");
+    const box = document.getElementById("smiles");
+    const go = document.getElementById("go");
+    const error = document.getElementById("error");
+    const result = document.getElementById("result");
+
+    document.querySelectorAll("[data-smiles]").forEach((button) => {
+      button.addEventListener("click", () => {
+        box.value = button.dataset.smiles;
+        form.requestSubmit();
+      });
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      error.style.display = "none";
+      go.disabled = true;
+      go.textContent = "Ranking…";
+      try {
+        const response = await fetch("/api/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ smiles: box.value })
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || "Request failed");
+        show(payload);
+      } catch (err) {
+        error.textContent = err.message;
+        error.style.display = "block";
+      } finally {
+        go.disabled = false;
+        go.textContent = "Rank targets";
+      }
+    });
+
+    function show(payload) {
+      const call = document.getElementById("call");
+      call.className = "call " + payload.call;
+      document.getElementById("call-name").innerHTML = "<b>" + labels[payload.call] + "</b>";
+      document.getElementById("call-note").textContent = notes[payload.call];
+      document.getElementById("meta").innerHTML =
+        "Panel score " + payload.score.toFixed(3) +
+        "<br>Distance to training " + payload.distance.toFixed(3);
+      const sketch = document.getElementById("sketch");
+      sketch.replaceChildren();
+      if (typeof payload.svg === "string" && payload.svg.trim().startsWith("<svg")) {
+        sketch.innerHTML = payload.svg;
+      }
+      showClasses(payload.targets);
+      const body = document.getElementById("rows");
+      body.replaceChildren();
+      payload.targets.forEach((target) => {
+        const tr = document.createElement("tr");
+        const width = Math.max(0, Math.min(100, target.score * 100));
+        tr.innerHTML =
+          "<td class='num'>" + target.rank + "</td>" +
+          "<td>" + escapeHtml(target.name) + "</td>" +
+          "<td>" + escapeHtml(target.gene) + "</td>" +
+          "<td class='num'>" + target.score.toFixed(3) + "</td>" +
+          "<td><div class='bar'><span style='width:" + width + "%'></span></div></td>";
+        body.appendChild(tr);
+      });
+      result.classList.add("show");
+    }
+
+    function showClasses(targets) {
+      const top = targets.slice(0, 10);
+      const counts = new Map();
+      top.forEach((target) => {
+        const name = target.class || "other";
+        counts.set(name, (counts.get(name) || 0) + 1);
+      });
+      const rows = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      const root = document.getElementById("classes");
+      root.replaceChildren();
+      rows.forEach(([name, count]) => {
+        const pct = Math.round((100 * count) / top.length);
+        const row = document.createElement("div");
+        row.className = "class-row";
+        const label = document.createElement("span");
+        label.textContent = classLabels[name] || name;
+        const bar = document.createElement("div");
+        bar.className = "class-bar";
+        const fill = document.createElement("span");
+        fill.style.width = pct + "%";
+        fill.style.background = classColors[name] || "#44403c";
+        bar.appendChild(fill);
+        const percent = document.createElement("span");
+        percent.className = "class-pct";
+        percent.textContent = pct + "%";
+        row.append(label, bar, percent);
+        root.appendChild(row);
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, (ch) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      }[ch]));
+    }
+  </script>
+</body>
+</html>

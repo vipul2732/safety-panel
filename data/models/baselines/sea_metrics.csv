@@ -1,0 +1,2 @@
+pair_auroc,panel_auroc,top5_hit_rate,n_molecules
+0.8576,0.8138,0.9162,12000

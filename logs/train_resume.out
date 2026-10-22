@@ -1,0 +1,13 @@
+device cuda train 118185 valid 14204 potent 138860 weak 16465
+resume from epoch 14 best valid pair 0.9118
+epoch 15 loss 0.1138 valid_pair 0.9132 valid_panel 0.7635
+epoch 16 loss 0.1093 valid_pair 0.9116 valid_panel 0.7474
+epoch 17 loss 0.1054 valid_pair 0.9122 valid_panel 0.7423
+epoch 18 loss 0.1018 valid_pair 0.9084 valid_panel 0.7417
+epoch 19 loss 0.0991 valid_pair 0.9097 valid_panel 0.7284
+epoch 20 loss 0.0956 valid_pair 0.9129 valid_panel 0.7362
+epoch 21 loss 0.0923 valid_pair 0.9115 valid_panel 0.7401
+early stop
+src/train_panel.py:241: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location=device)
+best valid pair AUROC 0.9132 test pair 0.9205 test panel 0.7679

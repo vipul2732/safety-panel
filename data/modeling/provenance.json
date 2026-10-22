@@ -1,0 +1,30 @@
+{
+  "rdkit_version": "2026.03.6",
+  "n_targets": 71,
+  "n_compounds": 175893,
+  "n_compounds_with_supervised_label": 146500,
+  "n_scaffolds": 65086,
+  "split_fractions": {
+    "train": 0.8,
+    "valid": 0.1,
+    "test": 0.1
+  },
+  "split_counts": {
+    "train": 140715,
+    "valid": 17589,
+    "test": 17589
+  },
+  "label_counts": {
+    "intermediate": 51046,
+    "potent": 170509,
+    "weak": 22007
+  },
+  "scaffold_overlap_across_splits": 0,
+  "inclusion_rule": "meets_ligand_floor = 1 and has_human_druglike_structure = 1",
+  "potent": "max pChEMBL >= 6",
+  "weak": "max pChEMBL < 5",
+  "intermediate": "5 <= max pChEMBL < 6; stored and withheld from both supervised classes",
+  "unknown": "no row in labels.csv for that compound-target pair; not an inactive",
+  "split": "Whole Bemis-Murcko scaffolds are assigned to the split with the most remaining molecule capacity. Acyclic molecules use their own canonical SMILES as the scaffold key. Invalid SMILES are singleton keys.",
+  "baseline": "A ligand-only model uses compounds.csv split and does not add a second split."
+}

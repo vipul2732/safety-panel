@@ -1,0 +1,16 @@
+device cuda train 118185 valid 14204 potent 138860 weak 16465
+epoch 1 loss 0.4423 valid_pair 0.8028 valid_panel 0.6430
+epoch 2 loss 0.1980 valid_pair 0.8334 valid_panel 0.7057
+epoch 3 loss 0.1855 valid_pair 0.8509 valid_panel 0.6944
+epoch 4 loss 0.1778 valid_pair 0.8612 valid_panel 0.7308
+epoch 5 loss 0.1700 valid_pair 0.8683 valid_panel 0.7128
+epoch 6 loss 0.1634 valid_pair 0.8777 valid_panel 0.7191
+epoch 7 loss 0.1564 valid_pair 0.8755 valid_panel 0.7077
+epoch 8 loss 0.1497 valid_pair 0.8929 valid_panel 0.7439
+epoch 9 loss 0.1431 valid_pair 0.8927 valid_panel 0.7483
+epoch 10 loss 0.1380 valid_pair 0.8957 valid_panel 0.7453
+epoch 11 loss 0.1319 valid_pair 0.8972 valid_panel 0.7449
+epoch 12 loss 0.1268 valid_pair 0.9036 valid_panel 0.7584
+epoch 13 loss 0.1220 valid_pair 0.9047 valid_panel 0.7526
+epoch 14 loss 0.1178 valid_pair 0.9118 valid_panel 0.7506
+=>> PBS: job killed: walltime 28819 exceeded limit 28800

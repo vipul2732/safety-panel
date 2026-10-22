@@ -1,0 +1,49 @@
+device cuda molecules 146500 checkpoint_epoch 14
+encoded ligands 128/146500
+encoded ligands 6528/146500
+encoded ligands 12928/146500
+encoded ligands 19328/146500
+encoded ligands 25728/146500
+encoded ligands 32128/146500
+encoded ligands 38528/146500
+encoded ligands 44928/146500
+encoded ligands 51328/146500
+encoded ligands 57728/146500
+encoded ligands 64128/146500
+encoded ligands 70528/146500
+encoded ligands 76928/146500
+encoded ligands 83328/146500
+encoded ligands 89728/146500
+encoded ligands 96128/146500
+encoded ligands 102528/146500
+encoded ligands 108928/146500
+encoded ligands 115328/146500
+encoded ligands 121728/146500
+encoded ligands 128128/146500
+encoded ligands 134528/146500
+encoded ligands 140928/146500
+encoded ligands 146500/146500
+valid pair 0.9118 panel 0.7506
+test pair 0.9174 panel 0.7569
+nearest neighbor 256/118185
+nearest neighbor 10496/118185
+nearest neighbor 20736/118185
+nearest neighbor 30976/118185
+nearest neighbor 41216/118185
+nearest neighbor 51456/118185
+nearest neighbor 61696/118185
+nearest neighbor 71936/118185
+nearest neighbor 82176/118185
+nearest neighbor 92416/118185
+nearest neighbor 102656/118185
+nearest neighbor 112896/118185
+nearest neighbor 118185/118185
+nearest neighbor 256/14204
+nearest neighbor 10496/14204
+nearest neighbor 14204/14204
+nearest neighbor 256/14111
+nearest neighbor 10496/14111
+nearest neighbor 14111/14111
+valid likely 5849 uncertain 7240 very_unlikely 1108 unfamiliar 7 false_clean 0.0500
+test likely 5720 uncertain 7248 very_unlikely 1136 unfamiliar 7 false_clean 0.0535
+wrote /home/vipul.k/targetscape/siwss_target_like/data/models

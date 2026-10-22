@@ -1,0 +1,4 @@
+adopted none
+reason no variant raised the validation panel AUROC without giving up more than 0.002 top-5
+baseline_valid_panel 0.8694 baseline_valid_top5 0.9577
+winner_valid_panel 0.8694 winner_valid_top5 0.9577
