@@ -1,0 +1,28 @@
+Third-party data
+
+The MIT License in LICENSE applies to the source code in this repository.
+It does not relicense the data below. Those files remain under the terms
+of their sources.
+
+ChEMBL
+Ligand measurements, including the tables under data/ligands/ and
+data/external/ that were taken from ChEMBL (https://www.ebi.ac.uk/chembl/),
+are available under the Creative Commons Attribution-ShareAlike 3.0
+Unported License (https://creativecommons.org/licenses/by-sa/3.0/).
+Give attribution to ChEMBL, preserve ChEMBL identifiers, and distribute
+adaptations of those data under CC BY-SA 3.0 or a compatible license.
+
+UniProt
+Protein sequences under data/sequences/ are from UniProt
+(https://www.uniprot.org/) and are available under the Creative Commons
+Attribution 4.0 International License
+(https://creativecommons.org/licenses/by/4.0/).
+Copyright UniProt Consortium. Reproduce this attribution when
+redistributing those sequences.
+
+Protein Data Bank
+Structure coordinates under data/structures/ are from the worldwide
+Protein Data Bank archive and are available under the CC0 1.0 Universal
+Public Domain Dedication
+(https://creativecommons.org/publicdomain/zero/1.0/).
+Attribute the original authors of each structure where possible.

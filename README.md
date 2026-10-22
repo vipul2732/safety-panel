@@ -59,3 +59,9 @@ python src/predict_panel.py --input molecules.smi --top 10 --output calls.csv
 The printed table gives rank, Tanimoto similarity, potent-interaction probability, gene symbol, protein class, and target name. The CSV contains the same fields together with the call, the panel score, and the distance to the training set.
 
 The fingerprint reference is `data/models/fingerprint_cutoff/reference.npz`. The ligand model is `data/models/ligand_only/ligand_only.pt`, and the Platt parameters fitted on the validation pairs are in `data/models/ligand_only/potent_calibration.npz`.
+
+## License
+
+The source code is released under the MIT License (see [LICENSE](LICENSE)). Copyright (c) 2026 Vipul Kumar.
+
+Data taken from public databases are not covered by that license. Ligand measurements from ChEMBL remain under CC BY-SA 3.0, UniProt sequences under CC BY 4.0, and Protein Data Bank coordinates under CC0 1.0. Attribution and any further conditions are set out in [NOTICE](NOTICE).
