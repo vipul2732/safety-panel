@@ -59,5 +59,3 @@ python src/predict_panel.py --input molecules.smi --top 10 --output calls.csv
 The printed table gives rank, Tanimoto similarity, potent-interaction probability, gene symbol, protein class, and target name. The CSV contains the same fields together with the call, the panel score, and the distance to the training set.
 
 The fingerprint reference is `data/models/fingerprint_cutoff/reference.npz`. The ligand model is `data/models/ligand_only/ligand_only.pt`, and the Platt parameters fitted on the validation pairs are in `data/models/ligand_only/potent_calibration.npz`.
-
-The ligand-graph store used during training, `data/features/ligands.npz`, is not included. It exceeds the file-size limit imposed by GitHub and is not required to run the screen.
