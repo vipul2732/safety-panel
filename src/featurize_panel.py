@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build pocket and ligand graphs for the dual encoder.
+"""
 
 Pockets come from the 8 Angstrom mmCIF files. The co-crystal ligand is left
 out of the pocket graph. Ligands get one ETKDGv3 conformer, with a 2D layout
