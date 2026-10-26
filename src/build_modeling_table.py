@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Freeze the modeling table for the 71 safety-panel targets.
+"""
 
 Supervised labels are potent (max pChEMBL >= 6) and weak (max pChEMBL < 5).
 Intermediate measurements are stored and withheld from both classes. A pair
