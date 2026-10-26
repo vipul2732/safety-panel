@@ -2,8 +2,7 @@
 """Fingerprint baselines on the held-out scaffolds.
 
 Reference ligands are training molecules potent on each target. Queries are
-the test split. Max ECFP4 Tanimoto is the 2D similarity method used by
-SwissTargetPrediction-style target fishing. The SEA score is a z-score of
+the test split. Max ECFP4 Tanimoto is the 2D similarity. The SEA score is a z-score of
 the summed similarity above a background threshold.
 """
 
