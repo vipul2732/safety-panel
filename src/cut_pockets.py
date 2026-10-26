@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download each representative structure and cut an 8 Angstrom ligand pocket.
+"""
 
 The pocket is every amino-acid residue with a heavy atom within 8 Angstrom of
 a heavy atom of the representative ligand, plus that ligand. When the ligand
